@@ -1,0 +1,66 @@
+<html>
+<head> 
+<title>2056110247 - Vũ Như Quỳnh</title> 
+
+<script>
+function tinhtong(x1,x2)
+{
+return parseInt(x1)+parseInt(x2); 
+} 
+
+function tinhhieu(x1,x2)
+{
+return parseInt(x1)-parseInt(x2); 
+} 
+
+function tinhtich(x1,x2)
+{
+return parseInt(x1)*parseInt(x2); 
+} 
+
+function tinhthuong(x1,x2)
+{
+return parseInt(x1)/parseInt(x2); 
+} 
+
+function tinhtongdayso(x1,x2)
+{
+var tong;
+tong=0; 
+for(let i=parseInt(x1);i<=parseInt(x2);i++) 
+tong=tong+i; 
+localStorage.x=tong; 
+return tong; 
+} 
+
+function thongbao()
+{
+for(let i=1;i<=10;i++) 
+alert(localStorage.x) 
+} 
+
+</script>
+</head>
+<body> 
+
+<form> 
+<label>số thứ nhất:</label> 
+<input type="text" id="sothunhat" name="sothunhat"> 
+<br><br> 
+<label>số thứ hai:</label> 
+<input type="text" id="sothuhai" name="sothuhai">
+<br><br> 
+<label>số thứ ba:</label> 
+<input type="text" id="sothuba" name="sothuba">
+<br><br> 
+<input type="button" onclick="sothuba.value=tinhtong(sothunhat.value,sothuhai.value)" value="Tính tổng"> 
+<input type="button" onclick="sothuba.value=tinhhieu(sothunhat.value,sothuhai.value)" value="Tính hiệu"> 
+<input type="button" onclick="sothuba.value=tinhtich(sothunhat.value,sothuhai.value)" value="Tính tích"> 
+<input type="button" onclick="sothuba.value=tinhthuong(sothunhat.value,sothuhai.value)" value="Tính thương"> 
+<input type="button" onclick="sothuba.value=tinhtongdayso(sothunhat.value,sothuhai.value)" value="Tính tổng dãy số"> 
+<input type="button" onclick="thongbao()" value="Thông báo"> 
+</form> 
+
+</form>
+</body>
+</html> 
